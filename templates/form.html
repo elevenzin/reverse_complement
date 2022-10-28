@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <form action="/data" method="POST">
+            <p class="fs-3"><label for="raw_input">Reverse Complement for DNA</label>
+            </p>
+            <textarea class="form-control" id="raw_input" name="raw_input" style="height: 200px; width: 80%"
+                placeholder="Please put in input Fasta File Contents or raw DNA Sequence"></textarea>
+            <p><input class="btn btn-primary" type="submit" onclick="return clicked();" value="Submit" /></p>
+        </form>
+        <script type="text/javascript">
+            function clicked() {
+                var inputVal = document.getElementById("raw_input").value;
+                let length = inputVal.length;
+                if (length == 0) {
+                    alert("Please enter a non-empty input!");
+                    return false;
+                }
+                yourformelement.submit();
+            }
+        </script>
+    </div>
+</body>
+
+</html>
